@@ -3,37 +3,516 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SNTPC | Société Nouvelle Transformer Papier et Carton</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-
+<title>SNTPC — Emballage en Carton Ondulé | Bourjine, Sousse, Tunisie</title>
+<meta name="description" content="SNTPC fabrique et transforme l'emballage en carton ondulé sur-mesure à Bourjine, M'Saken, Sousse. Plaques, caisses américaines, boîtes, présentoirs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  :root{
+    --navy:#0F3460;
+    --blue:#1976D2;
+    --blue-dark:#124E8C;
+    --grey-bg:#F4F6F9;
+    --text:#2B2F36;
+    --text-light:#5B6270;
+    --border:#E2E6EC;
+    --white:#FFFFFF;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Open Sans', Arial, sans-serif;
+    color:var(--text);
+    line-height:1.75;
+    font-size:19px;
+    background:var(--white);
+  }
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 24px;}
+  h1,h2,h3,h4{font-family:'Poppins', Arial, sans-serif;font-weight:700;color:var(--navy);line-height:1.28;}
+  h1{font-size:50px;}
+  h2{font-size:38px;}
+  h3{font-size:24px;}
+  p{font-size:19px;color:var(--text-light);}
+  a:focus-visible, button:focus-visible, summary:focus-visible{outline:3px solid var(--blue);outline-offset:2px;}
+  @media (prefers-reduced-motion: reduce){*{transition-duration:0.001ms !important;}}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
+  /* ---------- top bar ---------- */
+  .topbar{
+    background:var(--navy);color:#fff;font-size:14.5px;
+  }
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:9px 24px;flex-wrap:wrap;gap:6px;}
+  .topbar a{opacity:0.95;}
+  .topbar a:hover{text-decoration:underline;}
 
-body {
-    background: #111;
-    color: #fff;
-    line-height: 1.6;
-}
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;background:#fff;
+    box-shadow:0 2px 10px rgba(15,52,96,0.08);
+  }
+  .navbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 24px;max-width:1180px;margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:14px;font-family:'Poppins';font-weight:800;font-size:26px;color:var(--navy);}
+  .logo-img{height:44px;width:auto;display:block;}
+  .brand-text{display:flex;flex-direction:column;line-height:1.15;}
+  .brand-name{font-size:26px;}
+  .brand-sub{
+    font-family:'Open Sans', Arial, sans-serif;font-weight:600;font-size:11.5px;color:var(--text-light);
+    text-transform:none;letter-spacing:0.01em;max-width:180px;line-height:1.3;
+  }
+  .brand .mark{
+    width:46px;height:46px;border-radius:8px;background:var(--blue);
+    display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px;
+  }
+  nav.links{display:flex;gap:32px;}
+  nav.links a{font-weight:600;font-size:17px;color:var(--text);}
+  nav.links a:hover{color:var(--blue);}
+  .cta-btn{
+    background:var(--blue);color:#fff;font-weight:600;font-size:16.5px;
+    padding:13px 26px;border-radius:6px;display:inline-block;transition:background .2s ease;
+  }
+  .cta-btn:hover{background:var(--blue-dark);}
+  .cta-outline{
+    border:2px solid var(--blue);color:var(--blue);font-weight:600;font-size:16.5px;
+    padding:11px 24px;border-radius:6px;display:inline-block;transition:all .2s ease;
+  }
+  .cta-outline:hover{background:var(--blue);color:#fff;}
+  .menu-toggle{display:none;background:none;border:none;font-size:26px;cursor:pointer;color:var(--navy);}
 
-header {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)),
-    url('https://images.unsplash.com/photo-1581091012184-7c04e1b92b43?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-}
+  /* ---------- hero ---------- */
+  .hero{
+    background:linear-gradient(135deg, var(--navy) 0%, var(--blue-dark) 100%);
+    color:#fff;padding:90px 0;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:center;}
+  .hero .tag{
+    display:inline-block;background:rgba(255,255,255,0.15);padding:7px 16px;border-radius:20px;
+    font-size:14px;font-weight:600;letter-spacing:0.03em;margin-bottom:20px;
+  }
+  .hero h1{color:#fff;font-size:clamp(36px,5.2vw,56px);}
+  .hero p.lead{color:#DCE6F5;font-size:20px;margin-top:20px;max-width:560px;}
+  .hero-cta-row{margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;}
+  .hero-cta-row .cta-outline{border-color:#fff;color:#fff;}
+  .hero-cta-row .cta-outline:hover{background:#fff;color:var(--navy);}
+  .hero-visual{
+    padding:10px 0;display:grid;grid-template-columns:1fr 1fr;gap:32px 18px;
+  }
+  .hero-visual .box-icon{
+    text-align:center;padding:14px 10px;border-bottom:1px solid rgba(255,255,255,0.15);
+  }
+  .hero-visual .box-icon .n{font-family:'Poppins';font-weight:800;font-size:32px;}
+  .hero-visual .box-icon .l{font-size:14px;color:#DCE6F5;margin-top:6px;}
 
-header h1 {
+  /* ---------- stats ---------- */
+  .stats{background:var(--grey-bg);padding:50px 0;border-bottom:1px solid var(--border);}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;}
+  .stat .num{font-family:'Poppins';font-weight:800;font-size:38px;color:var(--blue);}
+  .stat .label{font-size:15px;color:var(--text-light);margin-top:6px;}
+
+  /* ---------- section shell ---------- */
+  section{padding:90px 0;}
+  section.tight{padding:70px 0;}
+  .section-head{max-width:680px;margin:0 auto 50px;text-align:center;}
+  .section-head .eyebrow{color:var(--blue);font-weight:700;font-size:14.5px;text-transform:uppercase;letter-spacing:0.05em;}
+  .section-head h2{margin-top:10px;}
+  .section-head p{margin-top:16px;}
+
+  /* ---------- about ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  .about-copy p{margin-bottom:16px;}
+  .about-list{margin-top:24px;display:flex;flex-direction:column;gap:14px;}
+  .about-list .item{display:flex;gap:12px;align-items:flex-start;}
+  .about-list .check{
+    width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;margin-top:2px;
+  }
+  .about-visual{
+    background:var(--grey-bg);border-radius:14px;padding:34px;border:1px solid var(--border);
+  }
+  .about-visual .row{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--border);}
+  .about-visual .row:last-child{border-bottom:none;}
+  .about-visual .row .k{font-weight:600;color:var(--navy);}
+  .about-visual .row .v{color:var(--text-light);}
+
+  /* ---------- products ---------- */
+  .products{background:var(--grey-bg);}
+  .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .product-card{
+    background:#fff;border-radius:12px;padding:28px 24px;border:1px solid var(--border);
+    transition:box-shadow .2s ease, transform .2s ease;
+  }
+  .product-card:hover{box-shadow:0 10px 24px rgba(15,52,96,0.1);transform:translateY(-3px);}
+  .product-card .num{
+    width:40px;height:40px;border-radius:8px;background:var(--blue);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;margin-bottom:16px;
+  }
+  .product-card h3{font-size:19px;}
+  .product-card p{font-size:15px;margin-top:8px;}
+
+  /* ---------- process ---------- */
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;}
+  .process-step{text-align:center;}
+  .process-step .circle{
+    width:70px;height:70px;border-radius:50%;background:var(--blue);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:800;font-size:24px;
+    margin:0 auto 18px;
+  }
+  .process-step h4{font-size:19px;color:var(--navy);}
+  .process-step p{font-size:15px;margin-top:8px;}
+
+  /* ---------- testimonials ---------- */
+  .testimonials{background:var(--grey-bg);}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .testi-card{background:#fff;border-radius:12px;padding:30px;border:1px solid var(--border);}
+  .testi-card .stars{color:#F5A623;font-size:16px;margin-bottom:14px;}
+  .testi-card q{display:block;font-style:normal;color:var(--text);font-size:15.5px;}
+  .testi-card .who{margin-top:20px;display:flex;align-items:center;gap:12px;}
+  .testi-card .avatar{
+    width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;
+  }
+  .testi-card .name{font-weight:700;color:var(--navy);font-size:15px;}
+  .testi-card .role{font-size:13.5px;color:var(--text-light);}
+
+  /* ---------- faq ---------- */
+  .faq-list{max-width:800px;margin:0 auto;}
+  details{border:1px solid var(--border);border-radius:10px;padding:20px 22px;margin-bottom:14px;background:#fff;}
+  summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;font-weight:600;font-size:16.5px;color:var(--navy);}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";font-size:22px;color:var(--blue);font-weight:700;}
+  details[open] summary::after{content:"–";}
+  details p{margin-top:14px;font-size:15.5px;}
+
+  /* ---------- contact ---------- */
+  .contact{background:var(--navy);color:#fff;}
+  .contact .section-head h2{color:#fff;}
+  .contact .section-head p{color:#C7D3E5;}
+  .contact .section-head .eyebrow{color:#7FB2F0;}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
+  .contact-info .row{display:flex;gap:16px;align-items:flex-start;margin-bottom:26px;}
+  .contact-info .icon{
+    width:46px;height:46px;border-radius:10px;background:rgba(255,255,255,0.12);
+    display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;
+  }
+  .contact-info .label{font-size:13.5px;text-transform:uppercase;letter-spacing:0.04em;color:#9FB3CE;font-weight:600;}
+  .contact-info .value{font-size:17px;margin-top:4px;}
+  .contact-info a.value:hover{color:#7FB2F0;}
+  .map-panel{
+    background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:14px;padding:32px;
+  }
+  .map-panel h4{color:#fff;font-family:'Poppins';font-size:20px;}
+  .map-panel p{color:#C7D3E5;margin-top:10px;font-size:15px;}
+  .map-embed{
+    margin-top:20px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.18);
+    filter:grayscale(0.15) contrast(1.05);
+  }
+  .map-panel .cta-btn{margin-top:22px;}
+
+  /* ---------- footer ---------- */
+  footer{background:#0A2647;color:#C7D3E5;padding:56px 0 28px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;}
+  .footer-grid .brand{color:#fff;}
+  .footer-grid p{color:#9FB3CE;font-size:14.5px;margin-top:14px;max-width:260px;}
+  .footer-grid h5{color:#fff;font-size:15px;font-weight:700;margin-bottom:16px;}
+  .footer-grid li{margin-bottom:10px;font-size:14.5px;}
+  .footer-grid li a:hover{color:#fff;}
+  .foot-bottom{
+    margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.12);
+    display:flex;justify-content:space-between;font-size:13.5px;color:#8FA5C4;flex-wrap:wrap;gap:10px;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:920px){
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+    .hero-grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;}
+    .stats .wrap{grid-template-columns:repeat(2,1fr);}
+    .product-grid{grid-template-columns:repeat(2,1fr);}
+    .process-grid{grid-template-columns:repeat(2,1fr);}
+    .testi-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:520px){
+    .product-grid{grid-template-columns:1fr;}
+    .process-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    h1{font-size:32px;}
+    h2{font-size:27px;}
+  }
+  @media (max-width:420px){
+    .brand-sub{font-size:9.5px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>📍 Bourjine, M'Saken, Sousse, Tunisie</span>
+    <span style="display:flex;gap:20px;align-items:center;">
+      <a href="mailto:ahmed.sntpc@ymail.com">✉️ ahmed.sntpc@ymail.com</a>
+      <a href="#contact" style="font-weight:600;">Nous contacter →</a>
+    </span>
+  </div>
+</div>
+
+<header>
+  <div class="navbar">
+    <div class="brand">
+      <img src="logo.png" alt="SNTPC" class="logo-img">
+      <span class="brand-sub">Société Nouvelle Transformer Papier et Carton</span>
+    </div>
+    <nav class="links">
+      <a href="#about">Qui sommes-nous</a>
+      <a href="#products">Nos produits</a>
+      <a href="#process">Notre process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="tag">Fabricant d'emballage carton ondulé — Tunisie</span>
+      <h1>Votre spécialiste de l'emballage en carton ondulé</h1>
+      <p class="lead">SNTPC conçoit, imprime, découpe et assemble des emballages en carton ondulé, standard ou sur-mesure, pour protéger vos produits à chaque étape du transport, du stockage et de la distribution. Basés à Bourjine (M'Saken, Sousse), nous accompagnons des entreprises industrielles, agroalimentaires et commerciales dans toute la Tunisie, du premier croquis jusqu'à la livraison.</p>
+      <div class="hero-cta-row">
+        <a href="#contact" class="cta-btn">Demander un devis gratuit</a>
+        <a href="#products" class="cta-outline">Découvrir nos produits</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy">
+      <span class="eyebrow" style="color:var(--blue);font-weight:700;font-size:14.5px;text-transform:uppercase;letter-spacing:0.05em;">Qui sommes-nous</span>
+      <h2 style="margin-top:10px;">SNTPC, l'emballage carton pensé pour votre produit</h2>
+      <p>SNTPC est une société tunisienne spécialisée dans la fabrication et la transformation d'emballages en carton ondulé. Basés à Bourjine, dans la région de M'Saken (Sousse), nous accompagnons des entreprises industrielles, agroalimentaires et commerciales dans toute la Tunisie.</p>
+      <p>Notre équipe étudie chaque produit à emballer — sa forme, son poids, ses contraintes de stockage — pour proposer une solution en carton ondulé adaptée : ni surdimensionnée, ni fragile. Du dessin technique à la livraison, nous suivons chaque commande de bout en bout.</p>
+      <p>Nous travaillons aussi bien avec de petites structures qu'avec des lignes de production à fort volume, en nous adaptant à vos cadences et à vos délais. Notre atelier de Bourjine nous permet de rester proches de nos clients de la région de Sousse tout en livrant dans l'ensemble du pays.</p>
+      <div class="about-list">
+        <div class="item"><span class="check">✓</span><span>Fabrication standard et sur-mesure, simple, double ou triple cannelure</span></div>
+        <div class="item"><span class="check">✓</span><span>Impression et marquage adaptés à votre image de marque</span></div>
+        <div class="item"><span class="check">✓</span><span>Suivi qualité et conseil technique sur le choix des matériaux</span></div>
+        <div class="item"><span class="check">✓</span><span>Livraison au jour convenu avec gestion détaillée de vos stocks</span></div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="row"><span class="k">Fondation</span><span class="v">2020</span></div>
+      <div class="row"><span class="k">Localisation</span><span class="v">Bourjine, M'Saken, Sousse</span></div>
+      <div class="row"><span class="k">Spécialité</span><span class="v">Carton ondulé sur-mesure</span></div>
+      <div class="row"><span class="k">Secteurs servis</span><span class="v">Industrie, agroalimentaire, distribution</span></div>
+      <div class="row"><span class="k">Engagement</span><span class="v">Carton recyclable et gestion des déchets</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Nos produits</span>
+      <h2>Une gamme complète d'emballages en carton</h2>
+      <p>Chaque référence est ajustable en dimension, en cannelure et en impression selon vos besoins.</p>
+    </div>
+    <div class="product-grid">
+      <div class="product-card"><div class="num">01</div><h3>Plaque</h3><p>Pour séparer, protéger et stabiliser vos produits pendant le transport.</p></div>
+      <div class="product-card"><div class="num">02</div><h3>Caisse américaine</h3><p>Caisses fabriquées sur-mesure, adaptées à vos produits et à vos charges.</p></div>
+      <div class="product-card"><div class="num">03</div><h3>Bac à bec</h3><p>Facilite le stockage, le rangement et le picking en entrepôt.</p></div>
+      <div class="product-card"><div class="num">04</div><h3>Boîte d'emballage</h3><p>L'emballage idéal pour les envois postaux et les transporteurs.</p></div>
+      <div class="product-card"><div class="num">05</div><h3>Plateau et corbeille</h3><p>Une solution simple et efficace pour le stockage de type traiteur.</p></div>
+      <div class="product-card"><div class="num">06</div><h3>Dépliant sur-mesure</h3><p>Idéal pour les faibles hauteurs et la mise sous kit.</p></div>
+      <div class="product-card"><div class="num">07</div><h3>Caisse conteneur</h3><p>Stockage et transport facilités, avec des dimensions adaptées.</p></div>
+      <div class="product-card"><div class="num">08</div><h3>Croisillons et calages</h3><p>Assurent le calage et la protection des produits fragiles.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Comment ça marche</span>
+      <h2>De l'idée à la caisse livrée</h2>
+      <p>Un processus clair en quatre étapes, du dessin technique à la livraison.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="circle">1</div>
+        <h4>Conception</h4>
+        <p>Étude du produit, du volume et des contraintes de stockage.</p>
+      </div>
+      <div class="process-step">
+        <div class="circle">2</div>
+        <h4>Impression</h4>
+        <p>Marquage et habillage graphique selon votre image de marque.</p>
+      </div>
+      <div class="process-step">
+        <div class="circle">3</div>
+        <h4>Découpe</h4>
+        <p>Découpe précise selon les gabarits validés avec vous.</p>
+      </div>
+      <div class="process-step">
+        <div class="circle">4</div>
+        <h4>Pliage-collage</h4>
+        <p>Assemblage final, contrôle qualité et livraison au jour convenu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Témoignages</span>
+      <h2>Ce que nos clients en disent</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <q>Des boîtes sur-mesure impeccables, avec une qualité d'impression qui a renforcé notre image de marque sur le marché.</q>
+        <div class="who"><div class="avatar">HB</div><div><div class="name">Helmi Bousaa</div><div class="role">Homme d'affaires</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <q>Des délais de livraison rapides et un service client exceptionnel qui font vraiment la différence au quotidien.</q>
+        <div class="who"><div class="avatar">KK</div><div><div class="name">Kenza Kazzah</div><div class="role">Commerciale</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <q>Nos produits sont désormais mieux protégés, et l'équipe a su répondre parfaitement à nos exigences créatives.</q>
+        <div class="who"><div class="avatar">RB</div><div><div class="name">Riheb Ben Amor</div><div class="role">Designer</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2>Vos questions, nos réponses</h2>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>Quels types de carton proposez-vous ?</summary>
+        <p>Nous travaillons le carton ondulé simple, double ou triple cannelure, le carton compact et le carton recyclé, selon la résistance recherchée pour vos produits.</p>
+      </details>
+      <details>
+        <summary>Comment choisir la bonne taille de caisse ?</summary>
+        <p>Nous partons des dimensions et du poids de vos produits pour proposer un format qui évite à la fois le surdimensionnement et le manque de protection.</p>
+      </details>
+      <details>
+        <summary>Le carton utilisé est-il recyclable ?</summary>
+        <p>Oui. L'essentiel du carton que nous utilisons est recyclable, et une partie est déjà issue de matières recyclées.</p>
+      </details>
+      <details>
+        <summary>Travaillez-vous sur des formats sur-mesure ?</summary>
+        <p>C'est notre spécialité : plaques, caisses, présentoirs et calages sont conçus selon vos gabarits exacts.</p>
+      </details>
+      <details>
+        <summary>Quels sont vos délais de livraison ?</summary>
+        <p>Les délais varient selon le volume et la complexité de la commande, mais nous confirmons toujours un jour de livraison ferme avec vous.</p>
+      </details>
+      <details>
+        <summary>Livrez-vous dans toute la Tunisie ?</summary>
+        <p>Oui, depuis notre atelier de Bourjine (M'Saken, Sousse), nous livrons nos clients dans l'ensemble du pays.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Contact</span>
+      <h2>Parlons de votre projet d'emballage</h2>
+      <p>Un produit à protéger, une contrainte de stockage, un volume à emballer ? Écrivez-nous, nous revenons vers vous sous 24h.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="row">
+          <div class="icon">✉️</div>
+          <div><div class="label">Email</div><a class="value" href="mailto:ahmed.sntpc@ymail.com">ahmed.sntpc@ymail.com</a></div>
+        </div>
+        <div class="row">
+          <div class="icon">📍</div>
+          <div><div class="label">Adresse</div><div class="value">Bourjine, M'Saken, Gouvernorat de Sousse, Tunisie</div></div>
+        </div>
+        <div class="row">
+          <div class="icon">🕒</div>
+          <div><div class="label">Horaires</div><div class="value">Lundi – Vendredi, 8h00 – 17h00</div></div>
+        </div>
+        <a href="mailto:ahmed.sntpc@ymail.com" class="cta-btn">Envoyer un email</a>
+      </div>
+      <div class="map-panel">
+        <h4>Nous trouver</h4>
+        <p>SNTPC, Bourjine — M'Saken, Sousse, Tunisie. Visite d'atelier possible sur rendez-vous.</p>
+        <div class="map-embed">
+          <iframe
+            src="https://maps.google.com/maps?q=SNTPC%2C%20Bourjine%2C%20M'Saken%2C%20Sousse%2C%20Tunisie&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="260" style="border:0;border-radius:10px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Localisation SNTPC - Bourjine, M'Saken, Sousse">
+          </iframe>
+        </div>
+        <a class="cta-btn" href="https://maps.app.goo.gl/wwDEuA3xHccJ71yY7" target="_blank" rel="noopener" style="margin-top:16px;">Ouvrir en plein écran</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="display:flex;align-items:center;gap:12px;">
+          <img src="logo.png" alt="SNTPC" style="height:34px;width:auto;">
+        </div>
+        <p>Fabrication et transformation d'emballage en carton ondulé, basée à Bourjine, M'Saken, Sousse.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#about">Qui sommes-nous</a></li>
+          <li><a href="#products">Nos produits</a></li>
+          <li><a href="#process">Notre process</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Nos produits</h5>
+        <ul>
+          <li><a href="#products">Plaque</a></li>
+          <li><a href="#products">Caisse américaine</a></li>
+          <li><a href="#products">Boîte d'emballage</a></li>
+          <li><a href="#products">Plateau &amp; corbeille</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:ahmed.sntpc@ymail.com">ahmed.sntpc@ymail.com</a></li>
+          <li><a href="https://maps.app.goo.gl/wwDEuA3xHccJ71yY7" target="_blank" rel="noopener">Bourjine, M'Saken, Sousse</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 SNTPC — Tous droits réservés</span>
+      <span>Carton ondulé · Bourjine, Sousse, Tunisie</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
     font-size: 3.5rem;
     font-weight: 800;
     letter-spacing: 2px;
