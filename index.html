@@ -1,3 +1,6 @@
+
+
+```
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -57,7 +60,7 @@
     padding:18px 24px;max-width:1180px;margin:0 auto;
   }
   .brand{display:flex;align-items:center;gap:14px;font-family:'Poppins';font-weight:800;font-size:26px;color:var(--navy);}
-  .logo-img{height:44px;width:auto;display:block;}
+  .logo-svg{height:44px;width:auto;display:block;}
   .brand-text{display:flex;flex-direction:column;line-height:1.15;}
   .brand-name{font-size:26px;}
   .brand-sub{
@@ -224,6 +227,7 @@
     margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.12);
     display:flex;justify-content:space-between;font-size:13.5px;color:#8FA5C4;flex-wrap:wrap;gap:10px;
   }
+  .footer-logo-svg{height:34px;width:auto;display:block;}
 
   /* ---------- responsive ---------- */
   @media (max-width:920px){
@@ -265,7 +269,12 @@
 <header>
   <div class="navbar">
     <div class="brand">
-      <img src="logo.png" alt="SNTPC" class="logo-img">
+      <!-- SVG Logo instead of external image -->
+      <svg class="logo-svg" width="160" height="44" viewBox="0 0 160 44">
+        <rect width="160" height="44" rx="6" fill="#0F3460"/>
+        <text x="12" y="20" font-family="'Poppins',Arial,sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">SNTPC</text>
+        <text x="12" y="38" font-family="'Open Sans',Arial,sans-serif" font-size="9" fill="#7FB2F0">Emballage Carton Ondulé</text>
+      </svg>
       <span class="brand-sub">Société Nouvelle Transformer Papier et Carton</span>
     </div>
     <nav class="links">
@@ -474,7 +483,12 @@
     <div class="footer-grid">
       <div>
         <div class="brand" style="display:flex;align-items:center;gap:12px;">
-          <img src="logo.png" alt="SNTPC" style="height:34px;width:auto;">
+          <!-- SVG Logo for footer -->
+          <svg class="footer-logo-svg" width="130" height="34" viewBox="0 0 130 34">
+            <rect width="130" height="34" rx="4" fill="#0F3460"/>
+            <text x="10" y="16" font-family="'Poppins',Arial,sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">SNTPC</text>
+            <text x="10" y="28" font-family="'Open Sans',Arial,sans-serif" font-size="7.5" fill="#7FB2F0">Emballage Carton</text>
+          </svg>
         </div>
         <p>Fabrication et transformation d'emballage en carton ondulé, basée à Bourjine, M'Saken, Sousse.</p>
       </div>
