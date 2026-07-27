@@ -214,6 +214,35 @@
   }
   .map-panel .cta-btn{margin-top:22px;}
 
+  /* ---------- back to top ---------- */
+  .back-to-top{
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:var(--blue);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.25);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(15px);
+    transition:opacity .35s ease, transform .35s ease, background .2s ease;
+    z-index:999;
+    cursor:pointer;
+  }
+  .back-to-top.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+  }
+  .back-to-top:hover{background:var(--blue-dark);}
+  .back-to-top svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+
   /* ---------- footer ---------- */
   footer{background:#0A2647;color:#C7D3E5;padding:56px 0 28px;}
   .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;}
@@ -329,11 +358,11 @@
     </div>
     <div class="product-grid">
       <div class="product-card"><img src="https://user18594.na.imgto.link/public/20260727/plaque.avif" alt="Plaque" class="product-img"><div class="card-body"><div class="num">01</div><h3>Plaque</h3><p>Pour séparer, protéger et stabiliser vos produits pendant le transport.</p></div></div>
-      <div class="product-card"><img src="https://images.pexels.com/photos/29653988/pexels-photo-29653988.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Caisse américaine" class="product-img"><div class="card-body"><div class="num">02</div><h3>Caisse américaine</h3><p>Caisses fabriquées sur-mesure, adaptées à vos produits et à vos charges.</p></div></div>
+      <div class="product-card"><img src="caisse-americaine.png" alt="Caisse américaine" class="product-img"><div class="card-body"><div class="num">02</div><h3>Caisse américaine</h3><p>Caisses fabriquées sur-mesure, adaptées à vos produits et à vos charges.</p></div></div>
       <div class="product-card"><img src="https://images.pexels.com/photos/10834810/pexels-photo-10834810.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bac à bec" class="product-img"><div class="card-body"><div class="num">03</div><h3>Bac à bec</h3><p>Facilite le stockage, le rangement et le picking en entrepôt.</p></div></div>
       <div class="product-card"><img src="https://images.pexels.com/photos/7203702/pexels-photo-7203702.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Boîte d'emballage" class="product-img"><div class="card-body"><div class="num">04</div><h3>Boîte d'emballage</h3><p>L'emballage idéal pour les envois postaux et les transporteurs.</p></div></div>
       <div class="product-card"><img src="https://images.pexels.com/photos/4816480/pexels-photo-4816480.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Plateau et corbeille" class="product-img"><div class="card-body"><div class="num">05</div><h3>Plateau et corbeille</h3><p>Une solution simple et efficace pour le stockage de type traiteur.</p></div></div>
-      <div class="product-card"><img src="https://images.pexels.com/photos/6170154/pexels-photo-6170154.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Caisse conteneur" class="product-img"><div class="card-body"><div class="num">06</div><h3>Caisse conteneur</h3><p>Stockage et transport facilités, avec des dimensions adaptées.</p></div></div>
+      <div class="product-card"><img src="caisse-conteneur.png" alt="Caisse conteneur" class="product-img"><div class="card-body"><div class="num">06</div><h3>Caisse conteneur</h3><p>Stockage et transport facilités, avec des dimensions adaptées.</p></div></div>
       <div class="product-card"><img src="https://images.pexels.com/photos/7203699/pexels-photo-7203699.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Croisillons et calages" class="product-img"><div class="card-body"><div class="num">07</div><h3>Croisillons et calages</h3><p>Assurent le calage et la protection des produits fragiles.</p></div></div>
     </div>
   </div>
@@ -493,6 +522,35 @@
     </div>
   </div>
 </footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut" title="Retour en haut">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+  (function(){
+    var btn = document.getElementById('backToTop');
+    var footer = document.querySelector('footer');
+
+    function toggleButton(){
+      var footerTop = footer.getBoundingClientRect().top;
+      var windowHeight = window.innerHeight;
+      // Le bouton apparaît quand on approche du footer (là où se trouve le logo du site)
+      if (footerTop < windowHeight + 200) {
+        btn.classList.add('show');
+      } else {
+        btn.classList.remove('show');
+      }
+    }
+
+    window.addEventListener('scroll', toggleButton);
+    toggleButton();
+
+    btn.addEventListener('click', function(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+</script>
 
 </body>
 </html>
