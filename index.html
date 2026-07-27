@@ -142,9 +142,11 @@
   .products{background:var(--grey-bg);}
   .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
   .product-card{
-    background:#fff;border-radius:12px;padding:28px 24px;border:1px solid var(--border);
-    transition:box-shadow .2s ease, transform .2s ease;
+    background:#fff;border-radius:12px;border:1px solid var(--border);
+    transition:box-shadow .2s ease, transform .2s ease;overflow:hidden;
   }
+  .product-img{width:100%;height:150px;object-fit:cover;display:block;background:var(--grey-bg);}
+  .product-card .card-body{padding:22px 22px 26px;}
   .product-card:hover{box-shadow:0 10px 24px rgba(15,52,96,0.1);transform:translateY(-3px);}
   .product-card .num{
     width:40px;height:40px;border-radius:8px;background:var(--blue);color:#fff;
@@ -326,14 +328,13 @@
       <p>Chaque référence est ajustable en dimension, en cannelure et en impression selon vos besoins.</p>
     </div>
     <div class="product-grid">
-      <div class="product-card"><div class="num">01</div><h3>Plaque</h3><p>Pour séparer, protéger et stabiliser vos produits pendant le transport.</p></div>
-      <div class="product-card"><div class="num">02</div><h3>Caisse américaine</h3><p>Caisses fabriquées sur-mesure, adaptées à vos produits et à vos charges.</p></div>
-      <div class="product-card"><div class="num">03</div><h3>Bac à bec</h3><p>Facilite le stockage, le rangement et le picking en entrepôt.</p></div>
-      <div class="product-card"><div class="num">04</div><h3>Boîte d'emballage</h3><p>L'emballage idéal pour les envois postaux et les transporteurs.</p></div>
-      <div class="product-card"><div class="num">05</div><h3>Plateau et corbeille</h3><p>Une solution simple et efficace pour le stockage de type traiteur.</p></div>
-      <div class="product-card"><div class="num">06</div><h3>Dépliant sur-mesure</h3><p>Idéal pour les faibles hauteurs et la mise sous kit.</p></div>
-      <div class="product-card"><div class="num">07</div><h3>Caisse conteneur</h3><p>Stockage et transport facilités, avec des dimensions adaptées.</p></div>
-      <div class="product-card"><div class="num">08</div><h3>Croisillons et calages</h3><p>Assurent le calage et la protection des produits fragiles.</p></div>
+      <div class="product-card"><img src="https://images.pexels.com/photos/20818885/pexels-photo-20818885.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Plaque" class="product-img"><div class="card-body"><div class="num">01</div><h3>Plaque</h3><p>Pour séparer, protéger et stabiliser vos produits pendant le transport.</p></div></div>
+      <div class="product-card"><img src="https://images.pexels.com/photos/29653988/pexels-photo-29653988.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Caisse américaine" class="product-img"><div class="card-body"><div class="num">02</div><h3>Caisse américaine</h3><p>Caisses fabriquées sur-mesure, adaptées à vos produits et à vos charges.</p></div></div>
+      <div class="product-card"><img src="https://images.pexels.com/photos/10834810/pexels-photo-10834810.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bac à bec" class="product-img"><div class="card-body"><div class="num">03</div><h3>Bac à bec</h3><p>Facilite le stockage, le rangement et le picking en entrepôt.</p></div></div>
+      <div class="product-card"><img src="https://images.pexels.com/photos/7203702/pexels-photo-7203702.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Boîte d'emballage" class="product-img"><div class="card-body"><div class="num">04</div><h3>Boîte d'emballage</h3><p>L'emballage idéal pour les envois postaux et les transporteurs.</p></div></div>
+      <div class="product-card"><img src="https://images.pexels.com/photos/4816480/pexels-photo-4816480.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Plateau et corbeille" class="product-img"><div class="card-body"><div class="num">05</div><h3>Plateau et corbeille</h3><p>Une solution simple et efficace pour le stockage de type traiteur.</p></div></div>
+      <div class="product-card"><img src="https://images.pexels.com/photos/6170154/pexels-photo-6170154.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Caisse conteneur" class="product-img"><div class="card-body"><div class="num">06</div><h3>Caisse conteneur</h3><p>Stockage et transport facilités, avec des dimensions adaptées.</p></div></div>
+      <div class="product-card"><img src="https://images.pexels.com/photos/7203699/pexels-photo-7203699.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Croisillons et calages" class="product-img"><div class="card-body"><div class="num">07</div><h3>Croisillons et calages</h3><p>Assurent le calage et la protection des produits fragiles.</p></div></div>
     </div>
   </div>
 </section>
