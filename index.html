@@ -87,6 +87,16 @@
   .hero{
     background:linear-gradient(135deg, var(--navy) 0%, var(--blue-dark) 100%);
     color:#fff;padding:90px 0;
+    position:relative;overflow:hidden;
+  }
+  .hero-video{
+    position:absolute;top:0;left:0;width:100%;height:100%;
+    object-fit:cover;z-index:0;
+  }
+  .hero-overlay{
+    position:absolute;top:0;left:0;width:100%;height:100%;
+    background:linear-gradient(135deg, rgba(15,52,96,0.82) 0%, rgba(18,78,140,0.82) 100%);
+    z-index:1;
   }
   .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:center;}
   .hero .tag{
@@ -254,16 +264,6 @@
 </head>
 <body>
 
-<section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="intro.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
-  <div class="wrap" ...>
-    ...
-  </div>
-</section>
-  
 <header>
   <div class="navbar">
     <div class="brand">
@@ -292,7 +292,11 @@
 </div>
 
 <section class="hero">
-  <div class="wrap">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="intro.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="wrap" style="position:relative;z-index:2;">
     <div>
       <span class="tag">Fabricant d'emballage carton ondulé — Tunisie</span>
       <h1>Votre spécialiste de l'emballage en carton ondulé</h1>
@@ -321,7 +325,7 @@
       </div>
     </div>
     <div class="about-visual">
-      <div class="row"><span class="k">Fondation</span><span class="v">2013</span></div>
+      <div class="row"><span class="k">Fondation</span><span class="v">2020</span></div>
       <div class="row"><span class="k">Localisation</span><span class="v">Bourjine, M'Saken, Sousse</span></div>
       <div class="row"><span class="k">Spécialité</span><span class="v">Carton ondulé sur-mesure</span></div>
       <div class="row"><span class="k">Secteurs servis</span><span class="v">Industrie, agroalimentaire, distribution</span></div>
@@ -339,11 +343,11 @@
     </div>
     <div class="product-grid">
       <div class="product-card"><img src="https://user18594.na.imgto.link/public/20260727/plaque.avif" alt="Plaque" class="product-img"><div class="card-body"><div class="num">01</div><h3>Plaque</h3><p>Pour séparer, protéger et stabiliser vos produits pendant le transport.</p></div></div>
-      <div class="product-card"><img src="cc2.png" alt="Caisse américaine" class="product-img"><div class="card-body"><div class="num">02</div><h3>Caisse américaine</h3><p>Caisses fabriquées sur-mesure, adaptées à vos produits et à vos charges.</p></div></div>
+      <div class="product-card"><img src="https://images.pexels.com/photos/29653988/pexels-photo-29653988.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Caisse américaine" class="product-img"><div class="card-body"><div class="num">02</div><h3>Caisse américaine</h3><p>Caisses fabriquées sur-mesure, adaptées à vos produits et à vos charges.</p></div></div>
       <div class="product-card"><img src="https://images.pexels.com/photos/10834810/pexels-photo-10834810.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bac à bec" class="product-img"><div class="card-body"><div class="num">03</div><h3>Bac à bec</h3><p>Facilite le stockage, le rangement et le picking en entrepôt.</p></div></div>
       <div class="product-card"><img src="https://images.pexels.com/photos/7203702/pexels-photo-7203702.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Boîte d'emballage" class="product-img"><div class="card-body"><div class="num">04</div><h3>Boîte d'emballage</h3><p>L'emballage idéal pour les envois postaux et les transporteurs.</p></div></div>
       <div class="product-card"><img src="https://images.pexels.com/photos/4816480/pexels-photo-4816480.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Plateau et corbeille" class="product-img"><div class="card-body"><div class="num">05</div><h3>Plateau et corbeille</h3><p>Une solution simple et efficace pour le stockage de type traiteur.</p></div></div>
-      <div class="product-card"><img src="cc11.png" alt="Caisse conteneur" class="product-img"><div class="card-body"><div class="num">06</div><h3>Caisse conteneur</h3><p>Stockage et transport facilités, avec des dimensions adaptées.</p></div></div>
+      <div class="product-card"><img src="https://images.pexels.com/photos/6170154/pexels-photo-6170154.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Caisse conteneur" class="product-img"><div class="card-body"><div class="num">06</div><h3>Caisse conteneur</h3><p>Stockage et transport facilités, avec des dimensions adaptées.</p></div></div>
       <div class="product-card"><img src="https://images.pexels.com/photos/7203699/pexels-photo-7203699.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Croisillons et calages" class="product-img"><div class="card-body"><div class="num">07</div><h3>Croisillons et calages</h3><p>Assurent le calage et la protection des produits fragiles.</p></div></div>
     </div>
   </div>
@@ -423,7 +427,7 @@
     <div class="section-head">
       <span class="eyebrow">Contact</span>
       <h2>Parlons de votre projet d'emballage</h2>
-      <p>Un produit à protéger, une contrainte de stockage, un volume à emballer ? Écrivez-nous, nous revenons vers vous le plus tôt possible.</p>
+      <p>Un produit à protéger, une contrainte de stockage, un volume à emballer ? Écrivez-nous, nous revenons vers vous sous 24h.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info">
@@ -441,7 +445,7 @@
         </div>
         <div class="row">
           <div class="icon">🕒</div>
-          <div><div class="label">Horaires</div><div class="value">Lundi – Samedi, 8h00 – 17h00</div></div>
+          <div><div class="label">Horaires</div><div class="value">Lundi – Vendredi, 8h00 – 17h00</div></div>
         </div>
         <a href="mailto:ahmed.sntpc@ymail.com" class="cta-btn">Envoyer un email</a>
       </div>
